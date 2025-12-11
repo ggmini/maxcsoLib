@@ -61,3 +61,9 @@ zlib/Debug/*
 zlib/Release/*
 zopflib/Debug/*
 zopflib/Release/*
+maxcsolib/x64/Debug/*
+maxcsolib/x64/Release/*
+TestCli/x64/Debug/*
+TestCli/x64/Release/*
+cli/x64/Debug/*
+cli/x64/Release/*
