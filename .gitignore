@@ -47,3 +47,17 @@
 *.VC.db
 *.suo
 .vs
+
+# Build directories
+7zip/Debug/*
+7zip/Release/*
+libdeflate/Debug/*
+libdeflate/Release/*
+libuv/Debug/*
+libuv/Release/*
+lz4/Debug/*
+lz4/Release/*
+zlib/Debug/*
+zlib/Release/*
+zopflib/Debug/*
+zopflib/Release/*
