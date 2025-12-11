@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cli", "cli.vcxproj", "{726474B8-FA25-4D84-B5FD-60AD025CE1BF}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lz4", "..\lz4\lz4.vcxproj", "{F761046E-6C38-4428-B5F2-38391A37BB34}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdeflate", "..\libdeflate\libdeflate.vcxproj", "{7A7902DB-786B-4A73-A68E-6D633EA1401D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Dependencies", "External Dependencies", "{E9EC4859-5B69-4FCF-B49A-542E744428F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +96,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F761046E-6C38-4428-A5F1-38391A37BB34} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
+		{6343B36E-030F-4A66-A588-758B2E2B5BED} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
+		{33066374-88CB-CB8D-15DA-61032886329A} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
+		{6343B36E-030F-4A66-A588-758B2E2B5BEE} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
+		{F761046E-6C38-4428-B5F2-38391A37BB34} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
+		{7A7902DB-786B-4A73-A68E-6D633EA1401D} = {E9EC4859-5B69-4FCF-B49A-542E744428F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B57E7A7C-2963-4097-998A-068F79D84754}
