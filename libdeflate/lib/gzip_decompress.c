@@ -30,7 +30,7 @@
 #include "gzip_constants.h"
 #include "unaligned.h"
 
-#include "libdeflate.h"
+#include "../libdeflate.h"
 
 LIBDEFLATEEXPORT enum libdeflate_result LIBDEFLATEAPI
 libdeflate_gzip_decompress_ex(struct libdeflate_decompressor *d,

@@ -31,7 +31,7 @@
 #include "gzip_constants.h"
 #include "unaligned.h"
 
-#include "libdeflate.h"
+#include "../libdeflate.h"
 
 LIBDEFLATEEXPORT size_t LIBDEFLATEAPI
 libdeflate_gzip_compress(struct libdeflate_compressor *c,

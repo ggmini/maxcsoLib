@@ -170,7 +170,7 @@
  */
 
 #include "lib_common.h"
-#include "libdeflate.h"
+#include "../libdeflate.h"
 
 typedef u32 (*crc32_func_t)(u32, const u8 *, size_t);
 

@@ -49,7 +49,7 @@
 #include "deflate_constants.h"
 #include "unaligned.h"
 
-#include "libdeflate.h"
+#include "../libdeflate.h"
 
 /*
  * If the expression passed to SAFETY_CHECK() evaluates to false, then the

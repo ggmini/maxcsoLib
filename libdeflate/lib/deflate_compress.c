@@ -31,7 +31,7 @@
 #include "deflate_constants.h"
 #include "unaligned.h"
 
-#include "libdeflate.h"
+#include "../libdeflate.h"
 
 /*
  * By default, the near-optimal parsing algorithm is enabled at compression
