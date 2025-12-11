@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -207,8 +207,6 @@
   <ItemGroup>
     <None Include="..\Makefile" />
     <None Include="..\README.md" />
-    <None Include="..\README_CSO.md" />
-    <None Include="..\README_ZSO.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="winargs.h" />
