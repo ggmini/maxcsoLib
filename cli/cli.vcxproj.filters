@@ -7,8 +7,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
-    <None Include="..\README_CSO.md" />
-    <None Include="..\README_ZSO.md" />
     <None Include="..\Makefile" />
   </ItemGroup>
   <ItemGroup>
