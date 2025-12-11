@@ -21,8 +21,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdeflate", "..\libdeflate
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Dependencies", "External Dependencies", "{E9EC4859-5B69-4FCF-B49A-542E744428F6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCli", "..\TestCli\TestCli.vcxproj", "{A7867715-C089-4956-ACE4-71E33A5950F3}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "maxcsolib", "..\maxcsolib\maxcsolib.vcxproj", "{1F66165A-1E73-4CC7-B81C-2B9FB7D52D84}"
 EndProject
 Global
