@@ -27,7 +27,7 @@ DEP_FLAGS := $(CFLAGS_UV) $(CFLAGS_LZ4) $(CFLAGS_ZLIB)
 LIBS := $(LIBS_UV) $(LIBS_LZ4) $(LIBS_ZLIB)
 
 OBJDIR := obj
-MKDIRS := $(OBJDIR)/src $(OBJDIR)/cli $(OBJDIR)/zopfli/src/zopfli
+MKDIRS := $(OBJDIR)/src $(OBJDIR)/maxcsolib $(OBJDIR)/LibTest $(OBJDIR)/zopfli/src/zopfli
 
 SRC_CFLAGS += -W -Wall -Wextra -Wno-implicit-function-declaration -DNDEBUG=1
 SRC_CXXFLAGS += -W -Wall -Wextra -std=c++11 -I$(SRCDIR)/zopfli/src -I$(SRCDIR)/7zip \
@@ -38,9 +38,13 @@ SRC_CXX_SRC := $(wildcard $(SRCDIR)/src/*.cpp)
 SRC_CXX_TMP := $(SRC_CXX_SRC:.cpp=.o)
 SRC_CXX_OBJ := $(patsubst $(SRCDIR)/%,$(OBJDIR)/%,$(SRC_CXX_TMP))
 
-CLI_CXX_SRC := $(wildcard $(SRCDIR)/cli/*.cpp)
-CLI_CXX_TMP := $(CLI_CXX_SRC:.cpp=.o)
-CLI_CXX_OBJ := $(patsubst $(SRCDIR)/%,$(OBJDIR)/%,$(CLI_CXX_TMP))
+LIB_CXX_SRC := $(wildcard $(SRCDIR)/maxcsolib/*.cpp)
+LIB_CXX_TMP := $(LIB_CXX_SRC:.cpp=.o)
+LIB_CXX_OBJ := $(patsubst &(SRCDIR)/%,$(OBJDIR)/%,$(LIB_CXX_TMP))
+
+TEST_CXX_SRC := $(wildcard $(SRCDIR)/LibTest/*.cpp)
+TEST_CXX_TMP := $(TEST_CXX_SRC:.cpp=.o)
+TEST_CXX_OBJ := $(patsubst $(SRCDIR)/%,$(OBJDIR)/%,$(TEST_CXX_TMP))
 
 ZOPFLI_C_DIR := $(SRCDIR)/zopfli/src/zopfli
 ZOPFLI_C_SRC := $(ZOPFLI_C_DIR)/blocksplitter.c $(ZOPFLI_C_DIR)/cache.c \
@@ -62,7 +66,7 @@ endif
 SRC_7ZIP := $(OBJDIR)/7zip/7zip.a
 SRC_LIBDEFLATE := $(SRCDIR)/libdeflate/$(LIBDEFLATE)
 
-OBJS := $(SRC_CXX_OBJ) $(CLI_CXX_OBJ) $(ZOPFLI_C_OBJ) $(SRC_7ZIP)
+OBJS := $(SRC_CXX_OBJ) $(LIB_CXX_OBJ) $(TEST_CXX_OBJ) $(ZOPFLI_C_OBJ) $(SRC_7ZIP)
 
 ifeq ($(USE_EXTERNAL_LIBDEFLATE), 0)
 	OBJS += $(SRC_LIBDEFLATE)
@@ -75,7 +79,7 @@ endif
 
 .PHONY: all clean install uninstall
 
-all: maxcso
+all: LibTesty
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(OBJDIR)/.done
 	$(CXX) -c $(SRC_CXXFLAGS) $(CXXFLAGS) -o $@ $<
@@ -83,7 +87,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(OBJDIR)/.done
 $(OBJDIR)/%.o: $(SRCDIR)/%.c $(OBJDIR)/.done
 	$(CC) -c $(SRC_CFLAGS) $(CFLAGS) -o $@ $<
 
-maxcso: $(OBJS)
+LibTesty: $(OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $(SRC_CXXFLAGS) $(CXXFLAGS) $^ $(LIBS)
 
 $(SRC_7ZIP):

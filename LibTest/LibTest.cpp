@@ -1,4 +1,4 @@
-#include "Compressor.h"
+#include "../maxcsolib/Compressor.h"
 
 #include <iostream>
 
@@ -11,4 +11,5 @@ int main() {
     compressor->Compress(args);
     delete compressor;
     std::cout << "Hello World!\n";
+    return 0;
 }
