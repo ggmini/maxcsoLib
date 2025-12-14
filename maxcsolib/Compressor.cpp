@@ -8,6 +8,11 @@
 
 #include <cinttypes>
 
+#if !_WINDLL
+#define sprintf_s(a, b, c, d, e) sprintf(a, b, c, d, e);
+#include <cstring>
+#endif
+
 inline uv_buf_t uv_buf_init(const char* str) {
     return uv_buf_init(const_cast<char*>(str), static_cast<unsigned int>(strlen(str)));
 }
@@ -47,7 +52,7 @@ namespace maxcsolib {
 
     void update_threadpool(const Arguments& args) {
         char threadpool_size[32];
-        sprintf_s(threadpool_size, "%d", args.threads);
+        sprintf(threadpool_size, "%d", args.threads);
         setenv("UV_THREADPOOL_SIZE", threadpool_size, 1);
     }
 
