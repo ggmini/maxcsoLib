@@ -69,3 +69,5 @@ cli/x64/Debug/*
 cli/x64/Release/*
 LibTest/x64/Debug/*
 LibTest/x64/Release/*
+
+.vscode/*
